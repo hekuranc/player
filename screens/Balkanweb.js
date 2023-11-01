@@ -14,7 +14,7 @@ const Balkanweb = () => {
       colors={["#030303", "#1a2d39"]}
     >
       <TextWhiteBackgroundOff
-        imageDimensions={require("../assets/status-bar.png")}
+        imageDimensions={require("../assets/status-bar1.png")}
         textWhiteBackgroundOffWidth="100%"
         textWhiteBackgroundOffAlignSelf="stretch"
         textWhiteBackgroundOffMaxWidth="100%"
@@ -24,8 +24,8 @@ const Balkanweb = () => {
         <Text style={styles.balkanwebWebview}>balkanweb webview</Text>
       </View>
       <PanoramaForm
-        dimensionCode={require("../assets/frame-15.png")}
-        imageDimensions={require("../assets/group-11.png")}
+        dimensionCode={require("../assets/frame-152.png")}
+        imageDimensions={require("../assets/group-111.png")}
         imageCode={require("../assets/vector.png")}
         propColor="#54575b"
         propColor1="#fe0010"

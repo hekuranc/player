@@ -15,7 +15,7 @@ const Panorama = () => {
       colors={["#030303", "#1a2d39"]}
     >
       <TextWhiteBackgroundOff
-        imageDimensions={require("../assets/status-bar.png")}
+        imageDimensions={require("../assets/status-bar1.png")}
         textWhiteBackgroundOffWidth="100%"
         textWhiteBackgroundOffAlignSelf="stretch"
         textWhiteBackgroundOffMaxWidth="100%"
@@ -25,8 +25,8 @@ const Panorama = () => {
         <Text style={styles.panoramaWebview}>Panorama webview</Text>
       </SafeAreaView>
       <PanoramaForm
-        dimensionCode={require("../assets/frame-15.png")}
-        imageDimensions={require("../assets/group-1.png")}
+        dimensionCode={require("../assets/frame-152.png")}
+        imageDimensions={require("../assets/group-11.png")}
         imageCode={require("../assets/vector1.png")}
         propColor="#54575b"
         propColor1="#54575b"

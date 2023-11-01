@@ -16,7 +16,7 @@ const News = () => {
       colors={["#030303", "#1a2d39"]}
     >
       <TextWhiteBackgroundOff
-        imageDimensions={require("../assets/status-bar.png")}
+        imageDimensions={require("../assets/status-bar1.png")}
         textWhiteBackgroundOffWidth="100%"
         textWhiteBackgroundOffAlignSelf="stretch"
         textWhiteBackgroundOffMaxWidth="100%"
@@ -43,8 +43,8 @@ const News = () => {
       </ScrollView>
       <PanoramaForm
         dimensionCode={require("../assets/frame-151.png")}
-        imageDimensions={require("../assets/group-1.png")}
-        imageCode={require("../assets/frame-17.png")}
+        imageDimensions={require("../assets/group-11.png")}
+        imageCode={require("../assets/frame-171.png")}
       />
     </LinearGradient>
   );

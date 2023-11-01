@@ -84,7 +84,7 @@ const TVPlayer = () => {
           <Image
             style={styles.home2Icon}
             contentFit="cover"
-            source={require("../assets/home21.png")}
+            source={require("../assets/home2.png")}
           />
           <Text style={[styles.tv, styles.tvTypo]}>TV</Text>
         </View>
@@ -92,7 +92,7 @@ const TVPlayer = () => {
           <Image
             style={styles.itemChild}
             contentFit="cover"
-            source={require("../assets/frame-151.png")}
+            source={require("../assets/frame-15.png")}
           />
           <Text style={[styles.lajmet, styles.tvTypo]}>Lajmet</Text>
         </View>
@@ -206,13 +206,13 @@ const styles = StyleSheet.create({
   },
   cardTop10: {
     height: 322,
-    width: 398,
     justifyContent: "center",
+    alignSelf: "stretch",
   },
   cardTop11: {
     height: 322,
-    width: 398,
     justifyContent: "center",
+    alignSelf: "stretch",
     marginTop: 24,
   },
   verticalscroll: {

@@ -10,7 +10,7 @@ const Menu = ({ style }) => {
         <Image
           style={styles.home2Icon}
           contentFit="cover"
-          source={require("../assets/home2.png")}
+          source={require("../assets/home22.png")}
         />
         <Text style={[styles.tv, styles.tvTypo]}>TV</Text>
       </View>
@@ -18,7 +18,7 @@ const Menu = ({ style }) => {
         <Image
           style={styles.itemChild}
           contentFit="cover"
-          source={require("../assets/frame-15.png")}
+          source={require("../assets/frame-152.png")}
         />
         <Text style={[styles.lajmet, styles.tvTypo]}>Lajmet</Text>
       </View>
@@ -26,7 +26,7 @@ const Menu = ({ style }) => {
         <Image
           style={styles.itemItem}
           contentFit="cover"
-          source={require("../assets/group-1.png")}
+          source={require("../assets/group-11.png")}
         />
         <Text style={[styles.lajmet, styles.tvTypo]}>Balkanweb</Text>
       </View>
@@ -34,7 +34,7 @@ const Menu = ({ style }) => {
         <Image
           style={styles.itemInner}
           contentFit="cover"
-          source={require("../assets/frame-17.png")}
+          source={require("../assets/frame-171.png")}
         />
         <Text style={[styles.lajmet, styles.tvTypo]}>Panorama</Text>
       </View>
