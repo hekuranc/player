@@ -6,7 +6,6 @@ import {
   ImageBackground,
   ImageSourcePropType,
 } from "react-native";
-import { FontSize, FontFamily, Color, Padding, Border } from "../GlobalStyles";
 
 const getStyleValue = (key, value) => {
   if (value === undefined) return;
@@ -39,37 +38,37 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
   },
   nov: {
-    fontSize: FontSize.bodyXsmallRegular_size,
+    fontSize: 10,
     lineHeight: 16,
-    fontFamily: FontFamily.bodyXsmallRegular,
-    color: Color.secondary200,
+    fontFamily: "Inter-Regular",
+    color: "#9d9ea1",
   },
   text: {
-    fontSize: FontSize.headingH6_size,
+    fontSize: 18,
     lineHeight: 25,
     fontWeight: "700",
-    fontFamily: FontFamily.bodyLargeBold,
-    color: Color.secondaryWhite,
+    fontFamily: "Inter-Bold",
+    color: "#fff",
     marginTop: 2,
   },
   date: {
     position: "absolute",
     bottom: 125,
     left: 16,
-    backgroundColor: Color.secondary500,
+    backgroundColor: "#292d32",
     width: 41,
     alignItems: "center",
-    padding: Padding.p_5xs,
+    padding: 8,
     opacity: 0,
     zIndex: 0,
-    borderRadius: Border.br_3xs,
+    borderRadius: 10,
   },
   thumbnailIcon: {
     alignSelf: "stretch",
     flex: 1,
     minWidth: 175,
     minHeight: 100,
-    borderRadius: Border.br_3xs,
+    borderRadius: 10,
   },
 });
 

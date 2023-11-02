@@ -10,7 +10,6 @@ import {
 import { LinearGradient } from "expo-linear-gradient";
 import TextWhiteBackgroundOff from "../components/TextWhiteBackgroundOff";
 import NewsCard from "../components/NewsCard";
-import { Padding, Color, Border, FontFamily, FontSize } from "../GlobalStyles";
 
 const TVPlayer = () => {
   return (
@@ -27,29 +26,29 @@ const TVPlayer = () => {
         textWhiteBackgroundOffOverflow="hidden"
       />
       <ScrollView
-        style={styles.content}
+        style={[styles.content, styles.contentFlexBox]}
         showsVerticalScrollIndicator={true}
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.contentScrollViewContent}
       >
-        <View style={styles.top}>
+        <View style={[styles.top, styles.topFlexBox]}>
           <Image
             style={styles.frameIcon}
             contentFit="cover"
             source={require("../assets/frame1.png")}
           />
-          <Text style={[styles.myNews, styles.noFlexBox]}>My News</Text>
+          <Text style={[styles.myNews, styles.textTypo]}>My News</Text>
         </View>
-        <View style={styles.verticalscroll}>
-          <View style={styles.cardFlexBox}>
+        <View style={[styles.verticalscroll, styles.contentFlexBox]}>
+          <View style={[styles.cardTop10, styles.cardFlexBox]}>
             <ImageBackground
               style={styles.thumbnailIcon}
               resizeMode="cover"
               source={require("../assets/thumbnail.png")}
             >
               <View style={[styles.date, styles.datePosition]}>
-                <Text style={[styles.no, styles.noFlexBox]}>No.</Text>
-                <Text style={[styles.text, styles.noFlexBox]}>1</Text>
+                <Text style={styles.no}>No.</Text>
+                <Text style={[styles.text, styles.textTypo]}>1</Text>
               </View>
             </ImageBackground>
             <NewsCard
@@ -66,8 +65,8 @@ const TVPlayer = () => {
               source={require("../assets/thumbnail1.png")}
             >
               <View style={styles.datePosition}>
-                <Text style={[styles.no, styles.noFlexBox]}>No.</Text>
-                <Text style={[styles.text, styles.noFlexBox]}>1</Text>
+                <Text style={styles.no}>No.</Text>
+                <Text style={[styles.text, styles.textTypo]}>1</Text>
               </View>
             </ImageBackground>
             <NewsCard
@@ -79,6 +78,40 @@ const TVPlayer = () => {
           </View>
         </View>
       </ScrollView>
+      <View style={[styles.menu, styles.topFlexBox]}>
+        <View style={[styles.item, styles.cardFlexBox]}>
+          <Image
+            style={styles.home2Icon}
+            contentFit="cover"
+            source={require("../assets/home2.png")}
+          />
+          <Text style={[styles.tv, styles.tvTypo]}>TV</Text>
+        </View>
+        <View style={[styles.item, styles.cardFlexBox]}>
+          <Image
+            style={styles.itemChild}
+            contentFit="cover"
+            source={require("../assets/frame-15.png")}
+          />
+          <Text style={[styles.lajmet, styles.tvTypo]}>Lajmet</Text>
+        </View>
+        <View style={[styles.item, styles.cardFlexBox]}>
+          <Image
+            style={styles.itemItem}
+            contentFit="cover"
+            source={require("../assets/group-1.png")}
+          />
+          <Text style={[styles.lajmet, styles.tvTypo]}>Balkanweb</Text>
+        </View>
+        <View style={[styles.item, styles.cardFlexBox]}>
+          <Image
+            style={styles.itemInner}
+            contentFit="cover"
+            source={require("../assets/frame-17.png")}
+          />
+          <Text style={[styles.lajmet, styles.tvTypo]}>Panorama</Text>
+        </View>
+      </View>
     </LinearGradient>
   );
 };
@@ -91,69 +124,74 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     justifyContent: "flex-start",
   },
-  noFlexBox: {
+  contentFlexBox: {
+    alignSelf: "stretch",
+    marginTop: 24,
+  },
+  topFlexBox: {
+    paddingVertical: 0,
+    justifyContent: "space-between",
+    flexDirection: "row",
+    alignSelf: "stretch",
+    alignItems: "center",
+  },
+  textTypo: {
     textAlign: "left",
+    color: "#fff",
+    fontFamily: "Inter-Bold",
+    fontWeight: "700",
     letterSpacing: 0,
+    fontSize: 18,
+  },
+  cardFlexBox: {
+    justifyContent: "center",
+    alignItems: "center",
   },
   datePosition: {
     zIndex: 0,
     display: "none",
-    padding: Padding.p_5xs,
+    padding: 8,
     width: 41,
-    backgroundColor: Color.secondary500,
+    backgroundColor: "#292d32",
     left: 16,
     bottom: 125,
     position: "absolute",
-    borderRadius: Border.br_3xs,
+    borderRadius: 10,
     alignItems: "center",
   },
-  cardFlexBox: {
-    justifyContent: "center",
-    height: 322,
-    alignSelf: "stretch",
-    alignItems: "center",
+  tvTypo: {
+    marginTop: 8,
+    fontFamily: "Inter-SemiBold",
+    fontWeight: "600",
+    lineHeight: 16,
+    fontSize: 10,
+    textAlign: "left",
+    letterSpacing: 0,
   },
   frameIcon: {
-    borderRadius: Border.br_smi_6,
+    borderRadius: 13,
     width: 42,
     height: 42,
     overflow: "hidden",
   },
   myNews: {
     lineHeight: 27,
-    color: Color.secondaryWhite,
-    fontFamily: FontFamily.bodyLargeBold,
-    fontWeight: "700",
-    fontSize: FontSize.headingH6_size,
-    textAlign: "left",
-    letterSpacing: 0,
   },
   top: {
-    flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: "space-between",
-    paddingHorizontal: Padding.p_xs,
-    paddingVertical: 0,
-    alignSelf: "stretch",
-    alignItems: "center",
+    paddingHorizontal: 12,
   },
   no: {
-    fontSize: FontSize.bodyXsmallRegular_size,
+    fontFamily: "Inter-Regular",
+    color: "#9d9ea1",
     lineHeight: 16,
-    fontFamily: FontFamily.bodyXsmallRegular,
-    color: Color.secondary200,
+    fontSize: 10,
     textAlign: "left",
     letterSpacing: 0,
   },
   text: {
     lineHeight: 25,
     marginTop: 2,
-    color: Color.secondaryWhite,
-    fontFamily: FontFamily.bodyLargeBold,
-    fontWeight: "700",
-    fontSize: FontSize.headingH6_size,
-    textAlign: "left",
-    letterSpacing: 0,
   },
   date: {
     opacity: 0,
@@ -161,25 +199,69 @@ const styles = StyleSheet.create({
   thumbnailIcon: {
     minWidth: 175,
     minHeight: 100,
-    borderRadius: Border.br_3xs,
+    borderRadius: 10,
     alignSelf: "stretch",
     flex: 1,
   },
+  cardTop10: {
+    height: 322,
+    justifyContent: "center",
+    alignSelf: "stretch",
+  },
   cardTop11: {
+    height: 322,
+    justifyContent: "center",
+    alignSelf: "stretch",
     marginTop: 24,
   },
   verticalscroll: {
     marginTop: 24,
-    alignSelf: "stretch",
     alignItems: "center",
   },
   content: {
     marginTop: 24,
-    alignSelf: "stretch",
     flex: 1,
   },
+  home2Icon: {
+    width: 24,
+    height: 24,
+  },
+  tv: {
+    color: "#fe0010",
+  },
+  item: {
+    borderRadius: 120,
+    paddingHorizontal: 0,
+    paddingVertical: 16,
+    flex: 1,
+  },
+  itemChild: {
+    borderRadius: 7,
+    width: 26,
+    height: 26,
+  },
+  lajmet: {
+    color: "#54575b",
+  },
+  itemItem: {
+    width: 20,
+    height: 24,
+  },
+  itemInner: {
+    width: 27,
+    height: 24,
+  },
+  menu: {
+    backgroundColor: "rgba(3, 3, 3, 0.8)",
+    borderStyle: "solid",
+    borderColor: "#54575b",
+    borderTopWidth: 1,
+    paddingHorizontal: 24,
+    opacity: 0.8,
+    marginTop: 24,
+  },
   tvplayer: {
-    backgroundColor: Color.otherGradient,
+    backgroundColor: "transparent",
     width: "100%",
     height: 802,
     alignItems: "center",

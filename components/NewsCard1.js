@@ -2,7 +2,6 @@ import * as React from "react";
 import { Text, StyleSheet, View } from "react-native";
 import { Image } from "expo-image";
 import ContainerThumbnailForm from "./ContainerThumbnailForm";
-import { Color, FontFamily, FontSize } from "../GlobalStyles";
 
 const NewsCard1 = () => {
   return (
@@ -46,18 +45,18 @@ const styles = StyleSheet.create({
     alignSelf: "stretch",
   },
   remindMeTypo: {
-    color: Color.secondary200,
-    fontFamily: FontFamily.bodyXsmallRegular,
+    color: "#9d9ea1",
+    fontFamily: "Inter-Regular",
     lineHeight: 16,
-    fontSize: FontSize.bodyXsmallRegular_size,
+    fontSize: 10,
     letterSpacing: 0,
   },
   fotoDjalliBn: {
-    fontSize: FontSize.bodyLargeBold_size,
+    fontSize: 16,
     lineHeight: 26,
     fontWeight: "700",
-    fontFamily: FontFamily.bodyLargeBold,
-    color: Color.secondaryWhite,
+    fontFamily: "Inter-Bold",
+    color: "#fff",
     letterSpacing: 0,
     textAlign: "left",
   },

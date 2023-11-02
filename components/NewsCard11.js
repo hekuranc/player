@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Text, StyleSheet, View } from "react-native";
 import ContainerThumbnailForm from "./ContainerThumbnailForm";
-import { FontSize, FontFamily, Color } from "../GlobalStyles";
 
 const NewsCard11 = () => {
   return (
@@ -41,11 +40,11 @@ const styles = StyleSheet.create({
     alignSelf: "stretch",
   },
   poShkelenLigjet: {
-    fontSize: FontSize.bodyLargeBold_size,
+    fontSize: 16,
     lineHeight: 26,
     fontWeight: "700",
-    fontFamily: FontFamily.bodyLargeBold,
-    color: Color.secondaryWhite,
+    fontFamily: "Inter-Bold",
+    color: "#fff",
   },
   title: {
     flex: 1,
@@ -56,10 +55,10 @@ const styles = StyleSheet.create({
     alignSelf: "stretch",
   },
   demonSlayerKimetsu: {
-    fontSize: FontSize.bodyXsmallRegular_size,
+    fontSize: 10,
     lineHeight: 16,
-    fontFamily: FontFamily.bodyXsmallRegular,
-    color: Color.secondary200,
+    fontFamily: "Inter-Regular",
+    color: "#9d9ea1",
     display: "none",
     marginTop: 12,
   },

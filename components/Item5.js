@@ -1,7 +1,6 @@
 import * as React from "react";
 import { StyleProp, ViewStyle, StyleSheet, Text, View } from "react-native";
 import { Image } from "expo-image";
-import { FontSize, FontFamily, Color, Border, Padding } from "../GlobalStyles";
 
 const Item5 = ({ style }) => {
   return (
@@ -23,22 +22,22 @@ const styles = StyleSheet.create({
     height: 26,
   },
   lajmet: {
-    fontSize: FontSize.bodyXsmallRegular_size,
+    fontSize: 10,
     letterSpacing: 0,
     lineHeight: 16,
     fontWeight: "600",
-    fontFamily: FontFamily.interSemiBold,
-    color: Color.activeMenu2,
+    fontFamily: "Inter-SemiBold",
+    color: "#fe0010",
     textAlign: "left",
     marginTop: 8,
   },
   item: {
     flex: 1,
-    borderRadius: Border.br_101xl,
+    borderRadius: 120,
     alignItems: "center",
     justifyContent: "center",
-    paddingHorizontal: Padding.p_xl,
-    paddingVertical: Padding.p_base,
+    paddingHorizontal: 20,
+    paddingVertical: 16,
   },
 });
 

@@ -1,11 +1,10 @@
 import * as React from "react";
+import { StyleProp, ViewStyle, StyleSheet, Text, View } from "react-native";
 import { Image } from "expo-image";
-import { StyleSheet, Text, View } from "react-native";
-import { FontSize, FontFamily, Color, Border, Padding } from "../GlobalStyles";
 
-const Menu1 = () => {
+const Menu1 = ({ style }) => {
   return (
-    <View style={styles.menu}>
+    <View style={[styles.menu, style]}>
       <View style={styles.item}>
         <Image
           style={styles.home2Icon}
@@ -40,21 +39,21 @@ const styles = StyleSheet.create({
     height: 24,
   },
   tv: {
-    fontSize: FontSize.bodyXsmallRegular_size,
+    fontSize: 10,
     letterSpacing: 0,
     lineHeight: 16,
     fontWeight: "600",
-    fontFamily: FontFamily.interSemiBold,
-    color: Color.passiveMenu,
+    fontFamily: "Inter-SemiBold",
+    color: "#54575b",
     textAlign: "left",
     marginTop: 8,
   },
   item: {
     flex: 1,
-    borderRadius: Border.br_101xl,
+    borderRadius: 120,
     justifyContent: "center",
-    paddingHorizontal: Padding.p_xl,
-    paddingVertical: Padding.p_base,
+    paddingHorizontal: 20,
+    paddingVertical: 16,
     alignItems: "center",
   },
   itemChild: {
@@ -67,14 +66,14 @@ const styles = StyleSheet.create({
     height: 24,
   },
   menu: {
-    backgroundColor: Color.colorGray,
+    backgroundColor: "rgba(3, 3, 3, 0.8)",
     borderStyle: "solid",
-    borderColor: Color.passiveMenu,
+    borderColor: "#54575b",
     borderTopWidth: 1,
     width: 438,
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingHorizontal: Padding.p_5xl,
+    paddingHorizontal: 24,
     paddingVertical: 0,
     opacity: 0.8,
     alignItems: "center",

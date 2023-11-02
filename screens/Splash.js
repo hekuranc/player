@@ -2,7 +2,6 @@ import * as React from "react";
 import { StatusBar, StyleSheet, View } from "react-native";
 import { Image } from "expo-image";
 import { LinearGradient } from "expo-linear-gradient";
-import { Color } from "../GlobalStyles";
 
 const Splash = () => {
   return (
@@ -42,7 +41,7 @@ const styles = StyleSheet.create({
   splash: {
     flex: 1,
     width: "100%",
-    backgroundColor: Color.otherGradient,
+    backgroundColor: "transparent",
   },
 });
 

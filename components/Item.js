@@ -1,7 +1,6 @@
 import * as React from "react";
 import { StyleProp, ViewStyle, StyleSheet, Text, View } from "react-native";
 import { Image } from "expo-image";
-import { FontSize, FontFamily, Color, Border, Padding } from "../GlobalStyles";
 
 const Item = ({ style }) => {
   return (
@@ -22,22 +21,22 @@ const styles = StyleSheet.create({
     height: 24,
   },
   panorama: {
-    fontSize: FontSize.bodyXsmallRegular_size,
+    fontSize: 10,
     letterSpacing: 0,
     lineHeight: 16,
     fontWeight: "600",
-    fontFamily: FontFamily.interSemiBold,
-    color: Color.passiveMenu,
+    fontFamily: "Inter-SemiBold",
+    color: "#54575b",
     textAlign: "left",
     marginTop: 8,
   },
   item: {
     flex: 1,
-    borderRadius: Border.br_101xl,
+    borderRadius: 120,
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: 0,
-    paddingVertical: Padding.p_base,
+    paddingVertical: 16,
   },
 });
 

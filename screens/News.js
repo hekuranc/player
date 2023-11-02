@@ -5,7 +5,6 @@ import { LinearGradient } from "expo-linear-gradient";
 import TextWhiteBackgroundOff from "../components/TextWhiteBackgroundOff";
 import NewsCard1 from "../components/NewsCard1";
 import NewsCard11 from "../components/NewsCard11";
-import { Border, FontSize, FontFamily, Color, Padding } from "../GlobalStyles";
 
 const News = () => {
   return (
@@ -22,12 +21,12 @@ const News = () => {
         textWhiteBackgroundOffOverflow="hidden"
       />
       <ScrollView
-        style={[styles.content, styles.contentSpaceBlock]}
+        style={[styles.content, styles.menuSpaceBlock]}
         showsVerticalScrollIndicator={true}
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.contentScrollViewContent}
       >
-        <View style={styles.top}>
+        <View style={[styles.top, styles.topFlexBox]}>
           <Image
             style={styles.frameIcon}
             contentFit="cover"
@@ -35,11 +34,45 @@ const News = () => {
           />
           <Text style={styles.myNews}>My News</Text>
         </View>
-        <View style={[styles.verticalscroll, styles.contentSpaceBlock]}>
+        <View style={[styles.verticalscroll, styles.menuSpaceBlock]}>
           <NewsCard1 />
           <NewsCard11 />
         </View>
       </ScrollView>
+      <View style={[styles.menu, styles.topFlexBox]}>
+        <View style={styles.item}>
+          <Image
+            style={styles.home2Icon}
+            contentFit="cover"
+            source={require("../assets/home21.png")}
+          />
+          <Text style={[styles.tv, styles.tvTypo]}>TV</Text>
+        </View>
+        <View style={styles.item}>
+          <Image
+            style={styles.itemChild}
+            contentFit="cover"
+            source={require("../assets/frame-151.png")}
+          />
+          <Text style={[styles.lajmet, styles.tvTypo]}>Lajmet</Text>
+        </View>
+        <View style={styles.item}>
+          <Image
+            style={styles.itemItem}
+            contentFit="cover"
+            source={require("../assets/group-111.png")}
+          />
+          <Text style={[styles.tv, styles.tvTypo]}>Balkanweb</Text>
+        </View>
+        <View style={styles.item}>
+          <Image
+            style={styles.itemInner}
+            contentFit="cover"
+            source={require("../assets/frame-1711.png")}
+          />
+          <Text style={[styles.tv, styles.tvTypo]}>Panorama</Text>
+        </View>
+      </View>
     </LinearGradient>
   );
 };
@@ -52,33 +85,44 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     justifyContent: "flex-start",
   },
-  contentSpaceBlock: {
+  menuSpaceBlock: {
     marginTop: 24,
     alignSelf: "stretch",
   },
+  topFlexBox: {
+    paddingVertical: 0,
+    justifyContent: "space-between",
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  tvTypo: {
+    marginTop: 8,
+    fontFamily: "Inter-SemiBold",
+    fontWeight: "600",
+    lineHeight: 16,
+    fontSize: 10,
+    textAlign: "left",
+    letterSpacing: 0,
+  },
   frameIcon: {
-    borderRadius: Border.br_smi_6,
+    borderRadius: 13,
     width: 42,
     height: 42,
     overflow: "hidden",
   },
   myNews: {
-    fontSize: FontSize.headingH6_size,
-    letterSpacing: 0,
+    fontSize: 18,
     lineHeight: 27,
     fontWeight: "700",
-    fontFamily: FontFamily.bodyLargeBold,
-    color: Color.secondaryWhite,
+    fontFamily: "Inter-Bold",
+    color: "#fff",
     textAlign: "left",
+    letterSpacing: 0,
   },
   top: {
     width: 358,
-    flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: "space-between",
-    paddingHorizontal: Padding.p_xs,
-    paddingVertical: 0,
-    alignItems: "center",
+    paddingHorizontal: 12,
   },
   verticalscroll: {
     alignItems: "center",
@@ -86,8 +130,49 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
   },
+  home2Icon: {
+    width: 24,
+    height: 24,
+  },
+  tv: {
+    color: "#54575b",
+  },
+  item: {
+    borderRadius: 120,
+    justifyContent: "center",
+    paddingHorizontal: 20,
+    paddingVertical: 16,
+    alignItems: "center",
+    flex: 1,
+  },
+  itemChild: {
+    borderRadius: 7,
+    width: 26,
+    height: 26,
+  },
+  lajmet: {
+    color: "#fe0010",
+  },
+  itemItem: {
+    width: 20,
+    height: 24,
+  },
+  itemInner: {
+    width: 27,
+    height: 24,
+  },
+  menu: {
+    backgroundColor: "rgba(3, 3, 3, 0.8)",
+    borderStyle: "solid",
+    borderColor: "#54575b",
+    borderTopWidth: 1,
+    paddingHorizontal: 24,
+    opacity: 0.8,
+    marginTop: 24,
+    alignSelf: "stretch",
+  },
   news: {
-    backgroundColor: Color.otherGradient,
+    backgroundColor: "transparent",
     width: "100%",
     height: 802,
     alignItems: "center",

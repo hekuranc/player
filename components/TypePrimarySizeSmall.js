@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 import { Image } from "expo-image";
 import { StyleSheet, Text, View, ImageSourcePropType } from "react-native";
-import { FontSize, FontFamily, Color, Border, Padding } from "../GlobalStyles";
 
 const getStyleValue = (key, value) => {
   if (value === undefined) return;
@@ -59,12 +58,12 @@ const styles = StyleSheet.create({
     width: 18,
   },
   button: {
-    fontSize: FontSize.bodyMediumMedium_size,
+    fontSize: 14,
     letterSpacing: 0,
     lineHeight: 22,
     fontWeight: "500",
-    fontFamily: FontFamily.bodyMediumMedium,
-    color: Color.secondary500,
+    fontFamily: "Inter-Medium",
+    color: "#292d32",
     textAlign: "center",
     marginLeft: 8,
   },
@@ -72,13 +71,13 @@ const styles = StyleSheet.create({
     marginLeft: 8,
   },
   typeprimarySizeSmall: {
-    borderRadius: Border.br_3xs,
-    backgroundColor: Color.primary500,
+    borderRadius: 10,
+    backgroundColor: "#6be48b",
     overflow: "hidden",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    padding: Padding.p_xs,
+    padding: 12,
   },
 });
 

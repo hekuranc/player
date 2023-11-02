@@ -2,16 +2,16 @@ import * as React from "react";
 import { StyleProp, ViewStyle, StyleSheet, Text, View } from "react-native";
 import { Image } from "expo-image";
 
-const Menu2 = ({ style }) => {
+const Menu3 = ({ style }) => {
   return (
     <View style={[styles.menu, style]}>
       <View style={styles.item}>
         <Image
           style={styles.home2Icon}
           contentFit="cover"
-          source={require("../assets/home21.png")}
+          source={require("../assets/home22.png")}
         />
-        <Text style={styles.tv}>TV</Text>
+        <Text style={[styles.tv, styles.tvTypo]}>TV</Text>
       </View>
       <View style={styles.item}>
         <Image
@@ -19,40 +19,50 @@ const Menu2 = ({ style }) => {
           contentFit="cover"
           source={require("../assets/frame-152.png")}
         />
-        <Text style={styles.tv}>Lajmet</Text>
+        <Text style={[styles.lajmet, styles.tvTypo]}>Lajmet</Text>
       </View>
       <View style={styles.item}>
         <Image
           style={styles.itemItem}
           contentFit="cover"
-          source={require("../assets/group-12.png")}
+          source={require("../assets/group-111.png")}
         />
-        <Text style={styles.tv}>Balkanweb</Text>
+        <Text style={[styles.lajmet, styles.tvTypo]}>Balkanweb</Text>
+      </View>
+      <View style={styles.item}>
+        <Image
+          style={styles.itemInner}
+          contentFit="cover"
+          source={require("../assets/frame-1711.png")}
+        />
+        <Text style={[styles.lajmet, styles.tvTypo]}>Panorama</Text>
       </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  tvTypo: {
+    marginTop: 8,
+    textAlign: "left",
+    fontFamily: "Inter-SemiBold",
+    fontWeight: "600",
+    lineHeight: 16,
+    letterSpacing: 0,
+    fontSize: 10,
+  },
   home2Icon: {
     width: 24,
     height: 24,
   },
   tv: {
-    fontSize: 10,
-    letterSpacing: 0,
-    lineHeight: 16,
-    fontWeight: "600",
-    fontFamily: "Inter-SemiBold",
-    color: "#54575b",
-    textAlign: "left",
-    marginTop: 8,
+    color: "#fe0010",
   },
   item: {
     flex: 1,
     borderRadius: 120,
     justifyContent: "center",
-    paddingHorizontal: 20,
+    paddingHorizontal: 0,
     paddingVertical: 16,
     alignItems: "center",
   },
@@ -61,16 +71,23 @@ const styles = StyleSheet.create({
     width: 26,
     height: 26,
   },
+  lajmet: {
+    color: "#54575b",
+  },
   itemItem: {
     width: 20,
     height: 24,
   },
+  itemInner: {
+    width: 27,
+    height: 24,
+  },
   menu: {
+    alignSelf: "stretch",
     backgroundColor: "rgba(3, 3, 3, 0.8)",
     borderStyle: "solid",
     borderColor: "#54575b",
     borderTopWidth: 1,
-    width: 438,
     flexDirection: "row",
     justifyContent: "space-between",
     paddingHorizontal: 24,
@@ -80,4 +97,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Menu2;
+export default Menu3;
