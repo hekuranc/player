@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     alignSelf: "stretch",
   },
   demonSlayerKimetsu: {
-    fontSize: FontSize.bodyXsmallSemibold_size,
+    fontSize: FontSize.bodyXsmallRegular_size,
     lineHeight: 16,
     fontFamily: FontFamily.bodyXsmallRegular,
     color: Color.secondary200,

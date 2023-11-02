@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     alignSelf: "stretch",
   },
   news24QPrej: {
-    fontSize: FontSize.bodyXsmallSemibold_size,
+    fontSize: FontSize.bodyXsmallRegular_size,
     lineHeight: 16,
     color: Color.secondary200,
     marginTop: 12,

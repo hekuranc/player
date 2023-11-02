@@ -1,18 +1,18 @@
 import * as React from "react";
-import { StyleProp, ViewStyle, StyleSheet, Text, View } from "react-native";
 import { Image } from "expo-image";
-import { FontFamily, FontSize, Color, Border, Padding } from "../GlobalStyles";
+import { StyleSheet, Text, View } from "react-native";
+import { FontSize, FontFamily, Color, Border, Padding } from "../GlobalStyles";
 
-const Menu3 = ({ style }) => {
+const Menu1 = () => {
   return (
-    <View style={[styles.menu, style]}>
+    <View style={styles.menu}>
       <View style={styles.item}>
         <Image
           style={styles.home2Icon}
           contentFit="cover"
-          source={require("../assets/home22.png")}
+          source={require("../assets/home21.png")}
         />
-        <Text style={[styles.tv, styles.tvTypo]}>TV</Text>
+        <Text style={styles.tv}>TV</Text>
       </View>
       <View style={styles.item}>
         <Image
@@ -20,15 +20,7 @@ const Menu3 = ({ style }) => {
           contentFit="cover"
           source={require("../assets/frame-152.png")}
         />
-        <Text style={[styles.lajmet, styles.tvTypo]}>Lajmet</Text>
-      </View>
-      <View style={styles.item}>
-        <Image
-          style={styles.itemItem}
-          contentFit="cover"
-          source={require("../assets/group-111.png")}
-        />
-        <Text style={[styles.lajmet, styles.tvTypo]}>Balkanweb</Text>
+        <Text style={styles.tv}>Lajmet</Text>
       </View>
       <View style={styles.item}>
         <Image
@@ -36,34 +28,32 @@ const Menu3 = ({ style }) => {
           contentFit="cover"
           source={require("../assets/frame-1711.png")}
         />
-        <Text style={[styles.lajmet, styles.tvTypo]}>Panorama</Text>
+        <Text style={styles.tv}>Panorama</Text>
       </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  tvTypo: {
-    marginTop: 8,
-    textAlign: "left",
-    fontFamily: FontFamily.interSemiBold,
-    fontWeight: "600",
-    lineHeight: 16,
-    letterSpacing: 0,
-    fontSize: FontSize.bodyXsmallRegular_size,
-  },
   home2Icon: {
     width: 24,
     height: 24,
   },
   tv: {
-    color: Color.activeMenu2,
+    fontSize: FontSize.bodyXsmallRegular_size,
+    letterSpacing: 0,
+    lineHeight: 16,
+    fontWeight: "600",
+    fontFamily: FontFamily.interSemiBold,
+    color: Color.passiveMenu,
+    textAlign: "left",
+    marginTop: 8,
   },
   item: {
     flex: 1,
     borderRadius: Border.br_101xl,
     justifyContent: "center",
-    paddingHorizontal: 0,
+    paddingHorizontal: Padding.p_xl,
     paddingVertical: Padding.p_base,
     alignItems: "center",
   },
@@ -72,23 +62,16 @@ const styles = StyleSheet.create({
     width: 26,
     height: 26,
   },
-  lajmet: {
-    color: Color.passiveMenu,
-  },
-  itemItem: {
-    width: 20,
-    height: 24,
-  },
   itemInner: {
     width: 27,
     height: 24,
   },
   menu: {
-    alignSelf: "stretch",
     backgroundColor: Color.colorGray,
     borderStyle: "solid",
     borderColor: Color.passiveMenu,
     borderTopWidth: 1,
+    width: 438,
     flexDirection: "row",
     justifyContent: "space-between",
     paddingHorizontal: Padding.p_5xl,
@@ -98,4 +81,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Menu3;
+export default Menu1;

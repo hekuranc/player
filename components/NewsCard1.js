@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     color: Color.secondary200,
     fontFamily: FontFamily.bodyXsmallRegular,
     lineHeight: 16,
-    fontSize: FontSize.bodyXsmallSemibold_size,
+    fontSize: FontSize.bodyXsmallRegular_size,
     letterSpacing: 0,
   },
   fotoDjalliBn: {

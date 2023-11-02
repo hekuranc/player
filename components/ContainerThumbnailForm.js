@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
   },
   nov: {
-    fontSize: FontSize.bodyXsmallSemibold_size,
+    fontSize: FontSize.bodyXsmallRegular_size,
     lineHeight: 16,
     fontFamily: FontFamily.bodyXsmallRegular,
     color: Color.secondary200,

@@ -4,7 +4,6 @@ import { StyleSheet, View, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 import TextWhiteBackgroundOff from "../components/TextWhiteBackgroundOff";
-import PanoramaForm from "../components/PanoramaForm";
 import { FontSize, FontFamily, Color } from "../GlobalStyles";
 
 const Panorama = () => {
@@ -24,14 +23,6 @@ const Panorama = () => {
       <SafeAreaView style={styles.panoramaWebviewWrapper}>
         <Text style={styles.panoramaWebview}>Panorama webview</Text>
       </SafeAreaView>
-      <PanoramaForm
-        dimensionCode={require("../assets/frame-152.png")}
-        imageDimensions={require("../assets/group-11.png")}
-        imageCode={require("../assets/vector1.png")}
-        propColor="#54575b"
-        propColor1="#54575b"
-        propColor2="#fe0010"
-      />
     </LinearGradient>
   );
 };
@@ -41,11 +32,11 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 0,
     left: 0,
-    fontSize: FontSize.bodyXsmallSemibold_size,
+    fontSize: FontSize.bodyXsmallRegular_size,
     letterSpacing: 0,
     lineHeight: 16,
     fontWeight: "600",
-    fontFamily: FontFamily.bodyXsmallSemibold,
+    fontFamily: FontFamily.interSemiBold,
     color: Color.secondaryWhite,
     textAlign: "left",
   },

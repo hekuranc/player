@@ -3,7 +3,6 @@ import { Image } from "expo-image";
 import { StyleSheet, View, Text } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import TextWhiteBackgroundOff from "../components/TextWhiteBackgroundOff";
-import PanoramaForm from "../components/PanoramaForm";
 import { FontSize, FontFamily, Color } from "../GlobalStyles";
 
 const Balkanweb = () => {
@@ -23,14 +22,6 @@ const Balkanweb = () => {
       <View style={styles.balkanwebWebviewWrapper}>
         <Text style={styles.balkanwebWebview}>balkanweb webview</Text>
       </View>
-      <PanoramaForm
-        dimensionCode={require("../assets/frame-152.png")}
-        imageDimensions={require("../assets/group-111.png")}
-        imageCode={require("../assets/vector.png")}
-        propColor="#54575b"
-        propColor1="#fe0010"
-        propColor2="#54575b"
-      />
     </LinearGradient>
   );
 };
@@ -40,11 +31,11 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 0,
     left: 0,
-    fontSize: FontSize.bodyXsmallSemibold_size,
+    fontSize: FontSize.bodyXsmallRegular_size,
     letterSpacing: 0,
     lineHeight: 16,
     fontWeight: "600",
-    fontFamily: FontFamily.bodyXsmallSemibold,
+    fontFamily: FontFamily.interSemiBold,
     color: Color.secondaryWhite,
     textAlign: "left",
   },

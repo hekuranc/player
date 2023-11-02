@@ -5,7 +5,6 @@ import { LinearGradient } from "expo-linear-gradient";
 import TextWhiteBackgroundOff from "../components/TextWhiteBackgroundOff";
 import NewsCard1 from "../components/NewsCard1";
 import NewsCard11 from "../components/NewsCard11";
-import PanoramaForm from "../components/PanoramaForm";
 import { Border, FontSize, FontFamily, Color, Padding } from "../GlobalStyles";
 
 const News = () => {
@@ -41,11 +40,6 @@ const News = () => {
           <NewsCard11 />
         </View>
       </ScrollView>
-      <PanoramaForm
-        dimensionCode={require("../assets/frame-151.png")}
-        imageDimensions={require("../assets/group-11.png")}
-        imageCode={require("../assets/frame-171.png")}
-      />
     </LinearGradient>
   );
 };

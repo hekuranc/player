@@ -1,6 +1,5 @@
 import React, { useMemo } from "react";
-import { Image } from "expo-image";
-import { StyleSheet, Text, View, ImageSourcePropType } from "react-native";
+import { ImageSourcePropType } from "react-native";
 import { FontFamily, FontSize, Color, Border, Padding } from "../GlobalStyles";
 
 const getStyleValue = (key, value) => {
@@ -44,22 +43,6 @@ const PanoramaForm = ({
     <View style={[styles.menu, menuStyle]}>
       <View style={styles.item}>
         <Image
-          style={styles.home2Icon}
-          contentFit="cover"
-          source={require("../assets/home21.png")}
-        />
-        <Text style={[styles.tv, styles.tvTypo]}>TV</Text>
-      </View>
-      <View style={styles.item}>
-        <Image
-          style={styles.itemChild}
-          contentFit="cover"
-          source={dimensionCode}
-        />
-        <Text style={[styles.lajmet, styles.tvTypo, lajmetStyle]}>Lajmet</Text>
-      </View>
-      <View style={styles.item}>
-        <Image
           style={styles.itemItem}
           contentFit="cover"
           source={imageDimensions}
@@ -80,55 +63,42 @@ const styles = StyleSheet.create({
   tvTypo: {
     marginTop: 8,
     textAlign: "left",
-    fontFamily: FontFamily.bodyXsmallSemibold,
+    fontFamily: FontFamily.interSemiBold,
     fontWeight: "600",
     lineHeight: 16,
     letterSpacing: 0,
-    fontSize: FontSize.bodyXsmallSemibold_size,
+    fontSize: FontSize.bodyXsmallRegular_size,
   },
-  home2Icon: {
-    width: 24,
+  itemItem: {
+    width: 20,
     height: 24,
   },
   tv: {
-    color: Color.secondary400,
+    color: Color.passiveMenu,
   },
   item: {
     flex: 1,
     borderRadius: Border.br_101xl,
     justifyContent: "center",
-    paddingHorizontal: 0,
+    paddingHorizontal: Padding.p_xl,
     paddingVertical: Padding.p_base,
     alignItems: "center",
-  },
-  itemChild: {
-    borderRadius: 7,
-    width: 26,
-    height: 26,
-  },
-  lajmet: {
-    color: Color.activeMenu2,
-  },
-  itemItem: {
-    width: 20,
-    height: 24,
   },
   itemInner: {
     width: 27,
     height: 24,
   },
   menu: {
-    alignSelf: "stretch",
     backgroundColor: Color.colorGray,
     borderStyle: "solid",
-    borderColor: Color.secondary400,
+    borderColor: Color.passiveMenu,
     borderTopWidth: 1,
+    width: 438,
     flexDirection: "row",
     justifyContent: "space-between",
     paddingHorizontal: Padding.p_5xl,
     paddingVertical: 0,
     opacity: 0.8,
-    marginTop: 24,
     alignItems: "center",
   },
 });
